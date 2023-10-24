@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Header.module.css";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -7,48 +8,42 @@ const Header = () => {
       <div className="py-8">
         <div className="container">
           <div className="flex items-center justify-between flex-wrap">
-            <a
-              href="index.html"
-              className="brand-logo flex-none lg:mr-10 md:w-auto max-w-[120px] "
-            >
-              <img src="/images/logo/logo.svg" alt="" />
-            </a>
+            <Link href="/" className="brand-logo flex-none lg:mr-10 md:w-auto ">
+              <img src="/images/logo/logo.svg" alt="" width={200} />
+            </Link>
             <div className="flex items-center flex-1">
               <div className="flex-1 main-menu  lg:relative xl:mr-[74px] mr-6">
                 <ul className="menu-active-classNamees">
                   <li>
-                    <a href="contact.html">Tentang</a>
+                    <Link href="/tentang">Tentang</Link>
                   </li>
                   <li>
-                    <a href="contact.html">MataKuliah</a>
+                    <Link href="/mata-kuliah">Matkul</Link>
                   </li>
                   <li>
-                    <a href="contact.html">Dosen</a>
+                    <Link href="/dosen">Dosen</Link>
                   </li>
                   <li className="menu-item-has-children">
                     <a href="#">Portofolio</a>
                     <ul className="sub-menu">
                       <li>
-                        <a href="index.html">Mahasiswa</a>
+                        <Link href="/portofolio/mahasiswa">Mahasiswa</Link>
                       </li>
                       <li>
-                        <a href="index2.html">Dosen</a>
+                        <Link href="/portofolio/dosen">Dosen</Link>
                       </li>
                     </ul>
                   </li>
                   <li>
-                    <a href="contact.html">Events</a>
+                    <Link href="/semua-event">Event</Link>
                   </li>
                   <li className="menu-item-has-children">
-                    <a href="#">UKM</a>
+                    <Link href="/ukm">UKM</Link>
                     <ul className="sub-menu">
                       <li>
-                        <a href="index.html">Insomnia</a>
+                        <Link href="/ukm/insomnia">Insomnia</Link>
                       </li>
                     </ul>
-                  </li>
-                  <li>
-                    <a href="contact.html">Kontak</a>
                   </li>
                 </ul>
               </div>
@@ -62,9 +57,12 @@ const Header = () => {
                   </button>
                 </div>
                 <div className="hidden lg:block">
-                  <a href="#" className="btn btn-primary py-[15px] px-8 ">
-                    Start Free Trial
-                  </a>
+                  <Link
+                    href="/kontak"
+                    className="btn btn-primary py-[15px] px-8 "
+                  >
+                    Hubungi Kontak Disini
+                  </Link>
                 </div>
               </div>
             </div>
